@@ -73,4 +73,27 @@ print(s1)
 TyprError: 'str' object does not support item assignment
 '''
 
-# 部分
+# 部分切片和完整切片的区别
+I = [1, 2, 3, 4, 5, 6, 7, 8, 9, 100]
+I1 = I[:6]
+print(id(I))
+print(id(I1))
+I2 = I[:]
+print(id(I))
+print(id(I2))
+# 非字符串列表可用下标替换元素
+I[3] = 666
+print(I)
+'''
+output:
+82357064
+89342664
+82357064
+80656328
+[1, 2, 3, 666, 5, 6, 7, 8, 9, 100]
+'''
+
+s = "i LOVE Python"
+print(s.capitalize()) # 该函数将首字母大写，其余字母小写，返回字符串
+
+s = "i love pYTHON" # 该函数将首字母大写，返回字符串
